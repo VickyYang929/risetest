@@ -29,18 +29,28 @@
       {"mondrian":{".js":["mondrian/entry.js"]}}
     </script>
 
-<style>
-img[src*="backgrounds/hotel.jpg"] {
-  content: url("./assets/hotel.jpg");
-  width: 100vw !important;
-  height: 100vh !important;
-  object-fit: cover !important;
-  position: absolute !important;
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
-</style>
+    <script>
+  const observer = new MutationObserver((mutations) => {
+    document.querySelectorAll('img.scenario-block__background').forEach(img => {
+      if (img.src.includes('backgrounds/hotel.jpg')) {
+        img.src = './assets/taproom.jpg';
+        img.style.width = '100vw';
+        img.style.height = '100vh';
+        img.style.objectFit = 'cover';
+        img.style.position = 'absolute';
+        img.style.top = '0';
+        img.style.left = '0';
+        img.style.zIndex = '-1';
+      }
+    });
+  });
+
+  observer.observe(document.body, {
+    childList: true,
+    subtree: true
+  });
+</script>
+
 
 
 
