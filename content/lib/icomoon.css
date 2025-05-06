@@ -21,10 +21,6 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
-  body {
-    background-color: #fdf6ec !important;
-  }
-
 
 .icon-edit-author-name:before {
 	content: "\e976";
