@@ -29,20 +29,19 @@
       {"mondrian":{".js":["mondrian/entry.js"]}}
     </script>
 
-    <style>
-  .scenario-block__background-wrapper {
-    width: 100vw !important;
-    height: 100vh !important;
-    overflow: hidden;
-  }
-
-  .scenario-block__background {
-    width: 100vw !important;
-    height: 100vh !important;
-    object-fit: cover !important;
-    object-position: center center !important;
-  }
+<style>
+img[src*="backgrounds/hotel.jpg"] {
+  content: url("./assets/taproom.jpg");
+  width: 100vw !important;
+  height: 100vh !important;
+  object-fit: cover !important;
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
 </style>
+
 
 
     <script>
